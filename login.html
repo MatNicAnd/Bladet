@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="login-page-container">
+      <div id="login-page-form">
+        <h2 class="login-page-title">Login</h2>
+        <input
+          type="text"
+          id="login-page-username"
+          class="login-page-input"
+          placeholder="Brugernavn"
+        />
+        <input
+          type="password"
+          id="login-page-password"
+          class="login-page-input"
+          placeholder="Password"
+        />
+        <button class="login-page-button" onclick="login()">Login</button>
+        <p class="login-page-link">
+          Har du ikke en profil, så
+          <a href="#" onclick="showRegister()">registrer dig her</a>
+        </p>
+      </div>
+
+      <div id="register-page-form" class="login-page-hidden">
+        <div id="password-criteria">
+          <p>Dit password skal mindst indeholde:</p>
+          <ul>
+            <li id="criteria-length">Mindst 6 tegn</li>
+            <li id="criteria-uppercase">Mindst et stort bogstav (A-Å)</li>
+            <li id="criteria-special">Mindst et specialtegn (!@#$%^&*)</li>
+            <li id="criteria-number">Mindst et nummer (0-9)</li>
+          </ul>
+        </div>
+        <h2 class="login-page-title">Registrer</h2>
+        <input
+          type="text"
+          id="register-page-username"
+          class="login-page-input"
+          placeholder="Brugernavn"
+        />
+        <input
+          type="password"
+          id="register-page-password"
+          class="login-page-input"
+          placeholder="Password"
+        />
+        <button class="login-page-button" onclick="register()">Register</button>
+        <p class="login-page-link">
+          Har du allerede en profil, så
+          <a href="#" onclick="showLogin()">login her</a>
+        </p>
+      </div>
+    </div>
+    <div id="user-list-container" style="display: block">
+      <h2>Registered Users</h2>
+      <ul id="user-list">
+        <!-- Registered users will be listed here -->
+      </ul>
+    </div>
+    <script src="scripts/login.js"></script>
+  </body>
+</html>

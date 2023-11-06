@@ -1,0 +1,106 @@
+/* ---------------------------------------------------------------- login page start ---------------------------------------------------------------- */
+#login-page-container {
+  font-family: Arial, sans-serif;
+}
+
+#login-page-form,
+#register-page-form {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #aaa;
+}
+
+.login-page-input {
+  width: calc(100% - 22px);
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.login-page-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-page-button:hover {
+  background-color: #4cae4c;
+}
+
+.login-page-link a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+.login-page-link a:hover {
+  text-decoration: underline;
+}
+
+.login-page-hidden {
+  display: none;
+}
+
+#password-criteria {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+#password-criteria ul {
+  list-style: none;
+  padding: 0;
+}
+
+#password-criteria li {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+/* liste til at slette users */
+
+#user-list-container {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #aaa;
+}
+
+#user-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#user-list li {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#user-list button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#user-list button:hover {
+  background-color: #d32f2f;
+}
+
+/* ---------------------------------------------------------------- login page slut ---------------------------------------------------------------- */
