@@ -1,0 +1,35 @@
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+  
+.menu li {
+    display: inline;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+  
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.politics {
+    background-color: red;
+}
+  
+.sports {
+    background-color: blue;
+}
+  
+.entertainment {
+    background-color: green;
+}
+  
+.login {
+    background-color: orange;
+}
+  
