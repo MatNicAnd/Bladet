@@ -77,3 +77,33 @@ h1 {
 #mode:hover {
     background-color: #9d4830;
 }
+
+.progress-container {
+    position: fixed;
+    top: 0px;
+    left: 14%;
+    width: 1220px;
+    background-color: transparent;
+    z-index: 999;
+}
+
+.progress-bar {
+    width: 0;
+    height: 30px;
+    background-color: #531b1b;
+    transition: width 0.2s;
+    max-width: 1220px; /* Følger med artiklens bredde */
+    position: absolute;
+    left: 0;
+}
+
+.progress-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #531b1b;
+    color: #fff;
+    z-index: 1000; /* Placerer teksten foran progressbaren */
+    height: 10px;
+}
