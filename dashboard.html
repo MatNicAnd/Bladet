@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      window.onload = function () {
+        var username = localStorage.getItem("username");
+        if (username) {
+          document.querySelector("h1").textContent =
+            "Welcome, " + username + "!";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <h1>Welcome, [Username]!</h1>
+      <nav class="user-nav">
+        <ul>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="dashboard-main">
+      <aside class="dashboard-sidebar">
+        <ul>
+          <li><a href="#section-overview">Dashboard Overview</a></li>
+          <li><a href="#section-details">Account Details</a></li>
+          <li><a href="#section-settings">Settings</a></li>
+          <!-- Additional sidebar items -->
+        </ul>
+      </aside>
+
+      <section class="dashboard-content">
+        <article id="section-overview">
+          <h2>Overview</h2>
+          <p>
+            Here's a snapshot of your recent activity and overall account
+            health.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h3>Logins This Week</h3>
+              <p><span class="stat-number">14</span> times</p>
+            </div>
+            <div class="stat-item">
+              <h3>Files Uploaded</h3>
+              <p><span class="stat-number">5</span> files</p>
+            </div>
+            <div class="stat-item">
+              <h3>Active Projects</h3>
+              <p><span class="stat-number">3</span> projects</p>
+            </div>
+            <div class="stat-item">
+              <h3>Messages Received</h3>
+              <p><span class="stat-number">8</span> new messages</p>
+            </div>
+          </div>
+          <!-- Additional widgets or summaries can go here -->
+        </article>
+
+        <article id="section-details">
+          <h2>Account Details</h2>
+          <p>Review and manage your account information and activities.</p>
+          <div class="account-info">
+            <h3>Personal Information</h3>
+            <p><strong>Name:</strong> Jane Doe</p>
+            <p><strong>Email:</strong> jane.doe@example.com</p>
+            <p><strong>Membership Level:</strong> Pro User</p>
+            <!-- User can edit their personal info here -->
+          </div>
+          <div class="activity-log">
+            <h3>Recent Activity</h3>
+            <ul>
+              <li>Logged in from new device (1 day ago)</li>
+              <li>Changed password (2 weeks ago)</li>
+              <li>Added new credit card (3 weeks ago)</li>
+            </ul>
+            <!-- More detailed activity log can be added here -->
+          </div>
+          <!-- Account details and related actions -->
+        </article>
+
+        <article id="section-settings">
+          <h2>Settings</h2>
+          <p>Configure your preferences and account settings.</p>
+          <form class="settings-form">
+            <label for="email-notifications">Email Notifications:</label>
+            <select id="email-notifications" name="email-notifications">
+              <option value="enabled">Enabled</option>
+              <option value="disabled">Disabled</option>
+            </select>
+            <label for="theme-selection">Theme Selection:</label>
+            <select id="theme-selection" name="theme-selection">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+            <button type="submit">Save Settings</button>
+          </form>
+          <!-- More settings forms and options can be provided here -->
+        </article>
+
+        <!-- Additional sections/articles for more dashboard content -->
+      </section>
+    </div>
+
+    <footer class="dashboard-footer">
+      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/login.js"></script>
+  </body>
+</html>

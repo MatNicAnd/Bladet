@@ -39,7 +39,7 @@ function login() {
     )
   ) {
     setCookie("loggedIn", "true", 1);
-    window.location.href = "welcome.html"; // Redirect to a new page upon successful login
+    window.location.href = "dashboard.html"; // Redirect to a new page upon successful login
   } else {
     alert("Invalid username or password.");
   }
@@ -78,6 +78,8 @@ function register() {
 
   // Set a cookie indicating successful registration
   setCookie("registered", "true", 1);
+
+  localStorage.setItem("username", user.username);
 
   // Clear input fields after successful registration
   document.getElementById("register-page-username").value = "";
@@ -132,9 +134,45 @@ function removeUser(index) {
 // Check if the user is already logged in
 window.onload = function () {
   if (getCookie("loggedIn")) {
-    window.location.href = "welcome.html";
+    window.location.href = "dashboard.html";
   } else {
     // New code: Display users if not logged in
     displayUsers();
   }
 };
+
+// dashboard scritps //
+
+function logout() {
+  // Here you would clear the session cookies or local storage and redirect to login
+  // For now, just redirecting to the login page
+  window.location.href = "login.html";
+}
+
+// Hide all sections initially
+function hideAllSections() {
+  document
+    .querySelectorAll(".dashboard-content article")
+    .forEach(function (article) {
+      article.style.display = "none";
+    });
+}
+
+// Show the specified section
+function showSection(sectionId) {
+  hideAllSections();
+  var section = document.getElementById(sectionId);
+  section.style.display = "block"; // Change as needed for your layout
+}
+
+// Add event listeners to the sidebar links
+document.querySelectorAll(".dashboard-sidebar a").forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Stop the default anchor behavior
+    var sectionId = this.getAttribute("href").substring(1); // Get the section ID
+    showSection(sectionId); // Show the clicked section
+  });
+});
+
+// Initialize the dashboard by showing the first section
+showSection("section-overview");
