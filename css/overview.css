@@ -1,0 +1,85 @@
+body {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.headingContainer {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(40px, 8vw, 95px);
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: clamp(25px, 3.1vw, 45px);
+}
+
+#cards {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    color: white;
+    margin: 20px;
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#card1 {
+    flex: 0 0 100%;
+    max-width: calc(100% - 40px);
+    height: 700px;
+}
+
+.card img {
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#card1 img.billede {
+    flex: 0 0 40%;
+}
+
+#card2,
+#card5 {
+    flex: 0 0 calc(66.67% - 40%);
+    max-width: calc(66.67% - 40px);
+    height: 400px;
+}
+
+#card2 img.billede,
+#card5 img.billede {
+    flex: 0 0 66%;
+}
+
+#card3,
+#card4 {
+    flex: 0 0 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    height: 400px;
+    flex-direction: column;
+}
+
+#card2 img.billede {
+    flex: 0 0 66%;
+}
+
+@media (max-width: 768px) {
+
+    /* Unter 768px Bildschirmbreite, Karten stapeln */
+    .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
