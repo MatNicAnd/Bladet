@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Send Nyhedsidé</h1>
+    <form id="nyhedsformular">
+        <label for="emne">Emne:</label>
+        <input type="text" name="emne" id="emne" required>
+        <br>
+        <label for="billede">Billede (valgfri):</label>
+        <input type="file" name="billede" id="billede">
+        <br>
+        <label for="besked">Besked:</label>
+        <textarea name="besked" id="besked" required></textarea>
+        <br>
+        <button id="sendButton" type="submit">Indsend</button>
+    </form>
+
+    <script src="/scripts/reality-check.js"></script>
+</body>
+</html>
