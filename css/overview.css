@@ -1,0 +1,78 @@
+body {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.overskrift {
+    padding: 20px;
+    flex: 0 0 calc(66.66% - 20px);
+}
+
+h1 {
+    font-size: clamp(40px, 5vw, 80px);
+}
+
+#cards {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    border: 1px solid #000;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+/* Erste Karte */
+#card1 {
+    flex: 0 0 calc(100% - 20px);
+    /* 100% Breite abzüglich des linken und rechten Rands */
+    height: 700px;
+}
+
+#card1 img.billede {
+    flex: 0 0 calc(33.34% - 20px);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Zweite Karte */
+#card2 {
+    flex: 0 0 calc(66.67% - 20px);
+    /* Zwei Drittel der Breite abzüglich des Rands */
+    height: 400px;
+}
+
+/* Dritte Karte */
+#card3 {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Ein Drittel der Breite abzüglich des Rands */
+    height: 400px;
+}
+
+/* Vierte Karte (linke Karte in der dritten Reihe) */
+#card4 {
+    flex: 0 0 calc(33.33% - 20px);
+    /* Ein Drittel der Breite abzüglich des Rands */
+    height: 400px;
+}
+
+/* Fünfte Karte (rechte Karte in der dritten Reihe) */
+#card5 {
+    flex: 0 0 calc(66.67% - 20px);
+    /* Zwei Drittel der Breite abzüglich des Rands */
+    height: 400px;
+}
+
+@media (max-width: 768px) {
+
+    /* Unter 768px Bildschirmbreite, Karten stapeln */
+    .card {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
