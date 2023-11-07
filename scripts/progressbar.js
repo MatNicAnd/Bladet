@@ -11,6 +11,8 @@ function updateProgressBar() {
     const scrollTop = window.scrollY;
 
     const progress = (scrollTop / (scrollHeight - clientHeight)) * 100;
-    progressBar.style.width = progress + '%';
-    progressText.textContent = Math.round(progress) + '% læst';
+    if (progress >= 0) {
+        progressBar.style.width = progress + '%';
+        progressText.textContent = Math.round(progress) + '% læst';
+    }
 }
