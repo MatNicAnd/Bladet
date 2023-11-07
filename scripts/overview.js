@@ -10,9 +10,12 @@ fetch('JSON/sport.json')
         card.querySelector('.overskrift').textContent = articleData.overskrift;
         const image = card.querySelector('.billede');
         image.src = 'billeder/' + articleData.billede;
+        image.alt = articleData.alt;
       }
     });
   })
   .catch(error => {
-    console.error('Fehler beim Abrufen der Daten:', error);
+    console.error('Fejl ved hentning af data: ', error);
   });
+
+
