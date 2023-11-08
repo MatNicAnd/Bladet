@@ -2,23 +2,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/reality-check.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Send Nyhedsidé</h1>
-    <form id="nyhedsformular">
+    <div id="menu-container"></div>
+    <form id="nyhedsformular" class="news">
+        <h1>Send nyhedsideer til os</h1>
         <label for="emne">Emne:</label>
         <input type="text" name="emne" id="emne" required>
         <br>
         <label for="billede">Billede (valgfri):</label>
         <input type="file" name="billede" id="billede">
         <br>
-        <label for="besked">Besked:</label>
+        <label for="besked">Detaljer</label>
         <textarea name="besked" id="besked" required></textarea>
         <br>
         <button id="sendButton" type="submit">Indsend</button>
     </form>
 
-    <script src="/scripts/reality-check.js"></script>
+    <script src="scripts/reality-check.js"></script>
+    <script src="scripts/menu.js"></script>
 </body>
 </html>

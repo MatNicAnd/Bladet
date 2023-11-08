@@ -2,7 +2,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: rgb(255, 255, 255);
     text-align: center;
 }
   
@@ -29,10 +28,13 @@
     background-color: green;
 }
   
-.login {
+.reality-check {
     background-color: orange;
 }
-  
+
+.login {
+    background-color: blueviolet;
+}
 
 .logo {
     margin-right: 10px; /* Juster margen mellem logo og menuelementer */
