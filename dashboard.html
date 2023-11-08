@@ -109,6 +109,16 @@
       </section>
     </div>
 
+    <!--Kode der henter html siden reality check som Mathias bad om >-->
+    <div id="exportRealityCheck"></div>
+    <script>
+      fetch("reality-check.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("exportRealityCheck").innerHTML = data;
+        });
+    </script>
+
     <footer class="dashboard-footer">
       <p>&copy; 2023 Your Company Name. All rights reserved.</p>
     </footer>
