@@ -1,7 +1,7 @@
 fetch('JSON/sport.json')
   .then(response => response.json())
   .then(data => {
-    const førsteArtikel = data.sportartikler[0];
+    const førsteArtikel = data.nyhederartikler[0];
     document.getElementById('overskrift').textContent = førsteArtikel.overskrift;
     document.title = førsteArtikel.overskrift;
     document.getElementById('tekst').textContent = førsteArtikel.tekst;
