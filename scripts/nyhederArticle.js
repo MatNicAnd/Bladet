@@ -1,4 +1,4 @@
-fetch('JSON/sport.json')
+fetch('JSON/articleData.json')
   .then(response => response.json())
   .then(data => {
     const førsteArtikel = data.nyhederartikler[0];
