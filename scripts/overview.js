@@ -1,29 +1,46 @@
-fetch('JSON/sport.json')
+fetch('JSON/articleData.json')
   .then(response => response.json())
   .then(data => {
     const title = document.title;
 
-    // Determine the array to use based on the document title
-    let articlesArray = [];
-    if (title === 'sport') {
-      articlesArray = data.sportartikler;
-    } else if (title === 'nyheder') {
-      articlesArray = data.nyhederartikler;
-    } else if (title === 'underholdning') {
-      articlesArray = data.underholdningartikler;
-    }
-
     const cards = document.querySelectorAll('.card');
+    const categories = ['nyheder', 'sport', 'underholdning'];
 
-    articlesArray.forEach((articleData, index) => {
-      const card = cards[index];
-      if (card) {
-        card.querySelector('.overskrift').textContent = articleData.overskrift;
+    if (title === 'forside') {
+      const selectedArticles = new Set();
+
+      cards.forEach(card => {
+        const category = categories[Math.floor(Math.random() * categories.length)];
+        const categoryArticles = data[category + 'artikler'];
+
+        let randomArticle;
+        do {
+          randomArticle = categoryArticles[Math.floor(Math.random() * categoryArticles.length)];
+        } while (selectedArticles.has(randomArticle));
+
+        selectedArticles.add(randomArticle);
+
+        card.querySelector('.overskrift').textContent = randomArticle.overskrift;
         const image = card.querySelector('.billede');
-        image.src = 'billeder/' + articleData.billede;
-        image.alt = articleData.alt;
+        image.src = 'billeder/' + randomArticle.billede;
+        image.alt = randomArticle.alt;
+      });
+    } else {
+      let articlesArray = [];
+      if (categories.includes(title)) {
+        articlesArray = data[title + 'artikler'];
       }
-    });
+
+      articlesArray.forEach((articleData, index) => {
+        const card = cards[index];
+        if (card) {
+          card.querySelector('.overskrift').textContent = articleData.overskrift;
+          const image = card.querySelector('.billede');
+          image.src = 'billeder/' + articleData.billede;
+          image.alt = articleData.alt;
+        }
+      });
+    }
   })
   .catch(error => {
     console.error('Fejl ved hentning af data: ', error);
