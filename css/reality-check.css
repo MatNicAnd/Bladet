@@ -1,0 +1,38 @@
+/* reality-check.css */
+
+.news {
+    width: 600px; /* Juster bredden efter behov */
+    margin: 0 auto; /* Centrer formular på siden */
+    text-align: center; /* Centrer tekst i formular */
+  }
+  
+  label {
+    display: block; /* Gør labels til blok-elementer for bedre placering */
+    margin-bottom: 5px; /* Lidt afstand mellem labels */
+  }
+  
+  input[type="text"],
+  input[type="file"],
+  textarea {
+    width: 100%; /* Fyld den tilgængelige bredde */
+    padding: 10px; /* Tilføj en smule padding for bedre udseende */
+    margin-bottom: 10px; /* Lidt afstand mellem inputfelter */
+    border: 1px solid #ccc; /* Tilføj en enkel kantlinje */
+    border-radius: 5px; /* Afrundede kanter */
+  }
+  
+  button {
+    background-color: #007BFF; /* Baggrundsfarve for knappen */
+    color: #fff; /* Tekstfarve */
+    padding: 10px 20px; /* Tilpas padding efter behov */
+    border: none; /* Fjern kantlinje */
+    border-radius: 5px; /* Afrundede kanter */
+    cursor: pointer; /* Gør musemarkøren til en hånd, når du svæver over knappen */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Ændr baggrundsfarve ved hover */
+  }
+  
+  /* Tilføj eventuelt yderligere stilarter efter behov */
+  

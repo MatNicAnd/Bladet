@@ -100,4 +100,5 @@ h1 {
     color: #fff;
     z-index: 1000; /* Placerer teksten foran progressbaren */
     height: 10px;
+    color:chocolate;
 }
