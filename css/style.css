@@ -1,4 +1,9 @@
 /* ---------------------------------------------------------------- login page start ---------------------------------------------------------------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
 #login-page-container {
   font-family: Arial, sans-serif;
 }
@@ -24,7 +29,7 @@
 .login-page-button {
   width: 100%;
   padding: 10px;
-  background-color: #5cb85c;
+  background-color: #008C79;
   color: white;
   border: none;
   border-radius: 3px;
@@ -32,7 +37,7 @@
 }
 
 .login-page-button:hover {
-  background-color: #4cae4c;
+  background-color: #007061;
 }
 
 .login-page-link a {
@@ -169,4 +174,5 @@
   text-align: center;
   padding: 10px 0;
 }
+
 /* ---------------------------------------------------------------- dashboard slut ---------------------------------------------------------------- */

@@ -1,43 +1,58 @@
+/* CSS for the menu */
+.topic {
+    height: 25px;
+    width: 125px;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.items {
+    margin-bottom: 10px;
+}
+
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
-  
-.menu li {
-    display: inline;
-    margin-right: 10px;
-    padding: 15px 20px;
+
+.menu .logo {
+    margin-right: 50px;
 }
-  
-.menu li a {
-    text-decoration: none;
-    color: #fff;
+
+.menu .logo-img {
+    width: 100px;
 }
 
 .politics {
-    background-color: red;
+    background-color: #008C79;
 }
-  
+
 .sports {
-    background-color: blue;
+    background-color: #B95539;
 }
-  
+
 .entertainment {
-    background-color: green;
-}
-  
-.reality-check {
-    background-color: orange;
+    background-color: #A15B87;
+    margin-right: 50px;
 }
 
-.login {
-    background-color: blueviolet;
-}
-
-.logo {
-    margin-right: 10px; /* Juster margen mellem logo og menuelementer */
-    width: 50px;
-    height: 50px;
+.mode {
+    cursor: pointer;
 }

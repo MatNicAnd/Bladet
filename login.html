@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div id="login-page-container">
-      <div id="login-page-form">
-        <h2 class="login-page-title">Login</h2>
-        <input
-          type="text"
-          id="login-page-username"
-          class="login-page-input"
-          placeholder="Brugernavn"
-        />
-        <input
-          type="password"
-          id="login-page-password"
-          class="login-page-input"
-          placeholder="Password"
-        />
-        <button class="login-page-button" onclick="login()">Login</button>
-        <p class="login-page-link">
-          Har du ikke en profil, så
-          <a href="#" onclick="showRegister()">registrer dig her</a>
-        </p>
-      </div>
 
-      <div id="register-page-form" class="login-page-hidden">
-        <div id="password-criteria">
-          <p>Dit password skal mindst indeholde:</p>
-          <ul>
-            <li id="criteria-length">Mindst 6 tegn</li>
-            <li id="criteria-uppercase">Mindst et stort bogstav (A-Å)</li>
-            <li id="criteria-special">Mindst et specialtegn (!@#$%^&*)</li>
-            <li id="criteria-number">Mindst et nummer (0-9)</li>
-          </ul>
-        </div>
-        <h2 class="login-page-title">Registrer</h2>
-        <input
-          type="text"
-          id="register-page-username"
-          class="login-page-input"
-          placeholder="Brugernavn"
-        />
-        <input
-          type="password"
-          id="register-page-password"
-          class="login-page-input"
-          placeholder="Password"
-        />
-        <button class="login-page-button" onclick="register()">Register</button>
-        <p class="login-page-link">
-          Har du allerede en profil, så
-          <a href="#" onclick="showLogin()">login her</a>
-        </p>
-      </div>
-    </div>
-    <div id="user-list-container" style="display: block">
-      <h2>Registered Users</h2>
-      <ul id="user-list">
-        <!-- Registered users will be listed here -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+  <ul class="menu">
+    <li class="logo"><a href="index.html"><img class="logo-img" src="billeder/BladetLogo.png" alt="Logo"></a></li>
+    <a href="nyhederOverview.html">
+      <li class="politics topic">Politik</li>
+    </a>
+    <a href="sportOverview.html">
+      <li class="sports topic">Sport</li>
+    </a>
+    <a href="underholdningOverview.html">
+      <li class="entertainment topic">Underholdning</li>
+    </a>
+    <li class="mode items" id="mode"><img src="billeder/mode.png" alt="Mode"></li>
+    <li class="reality-check items"><a href="reality-check.html"><img src="billeder/contact.png" alt="Kontakt"></a>
+    </li>
+    <li class="login items"><a href="login.html"><img src="billeder/login.png" alt="Login"></a></li>
+  </ul>
+  <div id="login-page-form">
+    <h2 class="login-page-title">Login</h2>
+    <input type="text" id="login-page-username" class="login-page-input" placeholder="Brugernavn" />
+    <input type="password" id="login-page-password" class="login-page-input" placeholder="Password" />
+    <button class="login-page-button" onclick="login()">Login</button>
+    <p class="login-page-link">
+      Har du ikke en profil, så
+      <a href="#" onclick="showRegister()">registrer dig her</a>
+    </p>
+  </div>
+
+  <div id="register-page-form" class="login-page-hidden">
+    <div id="password-criteria">
+      <p>Dit password skal mindst indeholde:</p>
+      <ul>
+        <li id="criteria-length">Mindst 6 tegn</li>
+        <li id="criteria-uppercase">Mindst et stort bogstav (A-Å)</li>
+        <li id="criteria-special">Mindst et specialtegn (!@#$%^&*)</li>
+        <li id="criteria-number">Mindst et nummer (0-9)</li>
       </ul>
     </div>
-    <script src="scripts/login.js"></script>
-  </body>
+    <h2 class="login-page-title">Registrer</h2>
+    <input type="text" id="register-page-username" class="login-page-input" placeholder="Brugernavn" />
+    <input type="password" id="register-page-password" class="login-page-input" placeholder="Password" />
+    <button class="login-page-button" onclick="register()">Register</button>
+    <p class="login-page-link">
+      Har du allerede en profil, så
+      <a href="#" onclick="showLogin()">login her</a>
+    </p>
+  </div>
+  </div>
+  <div id="user-list-container" style="display: block">
+    <h2>Registered Users</h2>
+    <ul id="user-list">
+      <!-- Registered users will be listed here -->
+    </ul>
+  </div>
+  <script src="scripts/login.js"></script>
+</body>
+
 </html>
