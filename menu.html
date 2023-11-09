@@ -1,23 +1,25 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/menu.css">
     <title>Document</title>
 </head>
+
 <body>
     <ul class="menu">
-        <li class="logo"><a href="index.html"><img class="logo" src="/billeder/BladetLogo.webp" alt="Logo"></a></li>
-        <li class="politics"><a href="nyhederOverview.html">Politik</a></li>
-        <li class="sports"><a href="sportOverview.html">Sport</a></li>
-        <li class="entertainment"><a href="underholdningOverview.html">Underholdning</a></li>
-        <li class="reality-check"><a href="reality-check.html">Kontakt</a></li>
-        <li class="login"><a href="login.html">Login</a></li>
+        <li class="logo"><a href="index.html"><img class="logo-img" src="billeder/BladetLogo.png" alt="Logo"></a></li>
+        <li class="politics topic"><a href="nyhederOverview.html">Politik</a></li>
+        <li class="sports topic"><a href="sportOverview.html">Sport</a></li>
+        <li class="entertainment topic"><a href="underholdningOverview.html">Underholdning</a></li>
+        <li class="mode items" id="mode"><img src="billeder/mode.png" alt="Mode"></li>
+        <li class="reality-check items"><a href="reality-check.html"><img src="billeder/contact.png" alt="Kontakt"></a>
+        </li>
+        <li class="login items"><a href="login.html"><img src="billeder/login.png" alt="Login"></a></li>
     </ul>
-      
-    <!-- Tilføj <div id="menu-container"></div> der hvor menuen skal genbruges tilføj også følgende filer i den html fil:
-        <link rel="stylesheet" href="css/menu.css">
-        <script src="scripts/menu.js"></script>
-    -->
+    <script src="scripts/mode.js"></script>
 </body>
+
 </html>

@@ -4,12 +4,3 @@ body {
     margin: 0 auto;
     font-family: Arial, sans-serif;
 }
-
-#mode {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20%;
-}

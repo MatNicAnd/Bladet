@@ -1,13 +1,32 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/reality-check.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div id="menu-container"></div>
+    <ul class="menu">
+        <li class="logo"><a href="index.html"><img class="logo-img" src="billeder/BladetLogo.png" alt="Logo"></a></li>
+        <a href="nyhederOverview.html">
+            <li class="politics topic">Politik</li>
+        </a>
+        <a href="sportOverview.html">
+            <li class="sports topic">Sport</li>
+        </a>
+        <a href="underholdningOverview.html">
+            <li class="entertainment topic">Underholdning</li>
+        </a>
+        <li class="mode items" id="mode"><img src="billeder/mode.png" alt="Mode"></li>
+        <li class="reality-check items"><a href="reality-check.html"><img src="billeder/contact.png" alt="Kontakt"></a>
+        </li>
+        <li class="login items"><a href="login.html"><img src="billeder/login.png" alt="Login"></a></li>
+    </ul>
     <form id="nyhedsformular" class="news">
         <h1>Send nyhedsideer til os</h1>
         <label for="emne">Emne:</label>
@@ -24,5 +43,7 @@
 
     <script src="scripts/reality-check.js"></script>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/mode.js"></script>
 </body>
+
 </html>
