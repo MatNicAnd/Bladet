@@ -74,25 +74,13 @@
           <script>
             fetch("reality-check.html")
               .then((response) => response.text())
-              .then((html) => {
-                // Parse the fetched HTML content into a new DOM object
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, "text/html");
-
-                // Select and remove the <ul class="menu"> element
-                const menu = doc.querySelector(".menu");
-                if (menu) {
-                  menu.remove();
-                }
-
-                // Set the modified HTML content without the menu into the container
-                document.getElementById("exportRealityCheck").innerHTML =
-                  doc.body.innerHTML;
+              .then((data) => {
+                document.getElementById("exportRealityCheck").innerHTML = data;
               });
           </script>
         </article>
         <article id="section-settings">
-          <h2>Settings</h2>
+          <h2>Indstillinger</h2>
           <p>Konfigurer dine præferencer og kontoindstillinger.</p>
           <form class="settings-form">
             <label for="email-notifications">Email Notefikationer:</label>
