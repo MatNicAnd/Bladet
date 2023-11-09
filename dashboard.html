@@ -5,19 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Dashboard</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script>
-      window.onload = function () {
-        var username = localStorage.getItem("username");
-        if (username) {
-          document.querySelector("h1").textContent =
-            "Welcome, " + username + "!";
-        }
-      };
-    </script>
   </head>
   <body>
     <header class="dashboard-header">
-      <h1>Welcome, [Username]!</h1>
+      <h1>Velkommen Jytte!</h1>
       <nav class="user-nav">
         <ul>
           <li><a href="profile.html">Profile</a></li>
@@ -25,102 +16,102 @@
         </ul>
       </nav>
     </header>
-
     <div class="dashboard-main">
       <aside class="dashboard-sidebar">
         <ul>
-          <li><a href="#section-overview">Dashboard Overview</a></li>
-          <li><a href="#section-details">Account Details</a></li>
-          <li><a href="#section-settings">Settings</a></li>
-          <!-- Additional sidebar items -->
+          <li><a href="#section-overview">Dashboard Overblik</a></li>
+          <li><a href="#section-details">Bruger Detajler</a></li>
+          <li><a href="#section-reality">Reality-check</a></li>
+          <li><a href="#section-settings">Indstillinger</a></li>
         </ul>
       </aside>
-
       <section class="dashboard-content">
         <article id="section-overview">
-          <h2>Overview</h2>
+          <h2>Oversigt</h2>
           <p>
-            Here's a snapshot of your recent activity and overall account
-            health.
+            Her er et øjebliksbillede af din seneste aktivitet og overordnede
+            konto sundhed.
           </p>
           <div class="stats-grid">
             <div class="stat-item">
-              <h3>Logins This Week</h3>
-              <p><span class="stat-number">14</span> times</p>
+              <h3>Logins den sidste uge</h3>
+              <p><span class="stat-number">14</span> gange</p>
             </div>
             <div class="stat-item">
-              <h3>Files Uploaded</h3>
-              <p><span class="stat-number">5</span> files</p>
+              <h3>Filer Tilføjet</h3>
+              <p><span class="stat-number">5</span> filer</p>
             </div>
             <div class="stat-item">
-              <h3>Active Projects</h3>
-              <p><span class="stat-number">3</span> projects</p>
+              <h3>Aktive Artikler</h3>
+              <p><span class="stat-number">3</span> artikler</p>
             </div>
             <div class="stat-item">
-              <h3>Messages Received</h3>
-              <p><span class="stat-number">8</span> new messages</p>
+              <h3>Beskeder Modtaget</h3>
+              <p><span class="stat-number">8</span> nye beskeder</p>
             </div>
           </div>
-          <!-- Additional widgets or summaries can go here -->
         </article>
-
         <article id="section-details">
-          <h2>Account Details</h2>
-          <p>Review and manage your account information and activities.</p>
+          <h2>Bruger Detajler</h2>
+          <p>Gennemgå og administrer dine kontooplysninger og aktiviteter.</p>
           <div class="account-info">
-            <h3>Personal Information</h3>
-            <p><strong>Name:</strong> Jane Doe</p>
-            <p><strong>Email:</strong> jane.doe@example.com</p>
-            <p><strong>Membership Level:</strong> Pro User</p>
-            <!-- User can edit their personal info here -->
+            <h3>Personlig information</h3>
+            <p><strong>Navn:</strong> Jytte Doe</p>
+            <p><strong>Email:</strong> Jytte.doe@example.com</p>
+            <p><strong>Bruger Level:</strong> Pro Bruger</p>
           </div>
           <div class="activity-log">
-            <h3>Recent Activity</h3>
+            <h3>Seneste Aktivitet</h3>
             <ul>
-              <li>Logged in from new device (1 day ago)</li>
-              <li>Changed password (2 weeks ago)</li>
-              <li>Added new credit card (3 weeks ago)</li>
+              <li>Logged ind fra ny enhed (1 dag siden)</li>
+              <li>Skiftede password (2 uger siden)</li>
+              <li>tilføjede nyt kreditkort (3 uger siden)</li>
             </ul>
-            <!-- More detailed activity log can be added here -->
           </div>
-          <!-- Account details and related actions -->
         </article>
+        <article id="section-reality">
+          <div id="exportRealityCheck"></div>
+          <script>
+            fetch("reality-check.html")
+              .then((response) => response.text())
+              .then((html) => {
+                // Parse the fetched HTML content into a new DOM object
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, "text/html");
 
+                // Select and remove the <ul class="menu"> element
+                const menu = doc.querySelector(".menu");
+                if (menu) {
+                  menu.remove();
+                }
+
+                // Set the modified HTML content without the menu into the container
+                document.getElementById("exportRealityCheck").innerHTML =
+                  doc.body.innerHTML;
+              });
+          </script>
+        </article>
         <article id="section-settings">
           <h2>Settings</h2>
-          <p>Configure your preferences and account settings.</p>
+          <p>Konfigurer dine præferencer og kontoindstillinger.</p>
           <form class="settings-form">
-            <label for="email-notifications">Email Notifications:</label>
+            <label for="email-notifications">Email Notefikationer:</label>
             <select id="email-notifications" name="email-notifications">
               <option value="enabled">Enabled</option>
               <option value="disabled">Disabled</option>
             </select>
-            <label for="theme-selection">Theme Selection:</label>
+            <label for="theme-selection">Tema indstillinger:</label>
             <select id="theme-selection" name="theme-selection">
               <option value="light">Light</option>
               <option value="dark">Dark</option>
             </select>
-            <button type="submit">Save Settings</button>
+            <button type="submit">Gem indstillinger</button>
           </form>
-          <!-- More settings forms and options can be provided here -->
         </article>
-
-        <!-- Additional sections/articles for more dashboard content -->
       </section>
     </div>
-
-    <!--Kode der henter html siden reality check som Mathias bad om >-->
-    <div id="exportRealityCheck"></div>
-    <script>
-      fetch("reality-check.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("exportRealityCheck").innerHTML = data;
-        });
-    </script>
-
     <footer class="dashboard-footer">
-      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+      <p>&copy; 2023 Bladet. All rights reserved.</p>
     </footer>
 
     <script src="scripts/login.js"></script>
