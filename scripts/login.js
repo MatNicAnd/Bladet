@@ -132,14 +132,14 @@ function removeUser(index) {
 }
 
 // Check if the user is already logged in
-window.onload = function () {
-  if (getCookie("loggedIn")) {
-    window.location.href = "dashboard.html";
-  } else {
-    // New code: Display users if not logged in
-    displayUsers();
-  }
-};
+// window.onload = function () {
+//   if (getCookie("loggedIn")) {
+//     window.location.href = "dashboard.html";
+//   } else {
+//     // New code: Display users if not logged in
+//     displayUsers();
+//   }
+// };
 
 // dashboard scritps //
 
